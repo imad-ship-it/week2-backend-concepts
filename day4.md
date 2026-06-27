@@ -29,4 +29,8 @@ request.user stores the data of the user who sends the request and  it is set au
 filter nby request.user
 it is used so that the user can access only his own tasks not the tasks of other users as well
 
-also create.user is used so that when the user is saved its password is hashed 
+create.user:
+also create.user is used so that when the user is saved its password is hashed
+
+performcreate:
+it is used to save the data in the database but the good thing about performcreate is that we can add or update the data to the database using this but in this the server puts user id by itself it doesnot take it from the user this is because if any unauthorized person comes and says he is the admin or user 1 2 he can easily access other users data but if we use performcreate the server will put user id by itself
